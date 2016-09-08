@@ -70,7 +70,7 @@ class EntrustServiceProvider extends ServiceProvider
 
         // Call to Entrust::can
         \Blade::directive('permission', function($expression) {
-            return "<?php if (\\Entrust::can{$expression}) : ?>";
+            return "<?php if (\\Entrust::can({$expression})) : ?>";
         });
 
         \Blade::directive('endpermission', function($expression) {
